@@ -145,7 +145,8 @@ svg {
   }
 }
 
-main {
+main,
+.secondary-main {
     width: 26rem;
     position: absolute;
     top: 50%;
@@ -267,7 +268,8 @@ main {
 }
 
 @media only screen and (max-width:420px) {
-  main {
+  main,
+  .secondary-main {
     width: 90vw;
   }
 
