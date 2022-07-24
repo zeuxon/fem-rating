@@ -9,14 +9,22 @@ function ratingChange(ratingNumber) {
 }
 
 function ratingSubmit() {
-    var oldMain = document.getElementById('primary-main');
-    oldMain.classList.add('next-main');
+
     var mainRating = document.getElementById('mainRatings');
     for (i = 0; i < 5; i++) {
         if (mainRating.children[i].getAttribute('id') == 'active') {
             selectedRating = i;
         }
     }
-    var selectedText = document.getElementById('final-rating');
-    selectedText.innerHTML = selectedRating+1;
+
+    if(typeof selectedRating === 'undefined') {
+        alert('Please select a rating');
+        return;
+    } else {
+        var oldMain = document.getElementById('primary-main');
+        oldMain.classList.add('next-main');
+        var selectedText = document.getElementById('final-rating');
+        selectedText.innerHTML = selectedRating+1;
+    }
+
 }
