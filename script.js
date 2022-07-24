@@ -2,6 +2,7 @@ function ratingChange(ratingNumber) {
     var mainRating = document.getElementById('mainRatings');
     var requiredRating = mainRating.children[ratingNumber-1];
     for (i = 0; i < 5; i++) {
+        mainRating.children[i].removeAttribute('id');
         mainRating.children[i].classList.remove('active');
     }
     requiredRating.classList.add('active');
